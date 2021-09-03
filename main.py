@@ -9,9 +9,6 @@ import yfinance as yf
 start = '2019-01-01'
 end  = '2020-12-31'
 tcs = yf.download('TCS',start,end)
-infy = yf.download('INFY',start,end)
-wipro = yf.download('WIPRO.NS',start,end)
-tcs['Open'].plot(label = 'TCS', figsize = (15,7))
-infy['Open'].plot(label = "Infosys")
-wipro['Open'].plot(label = 'Wipro')
-plt.title('Stock Prices of TCS, Infosys and Wipro')
+
+df = (tcs['Open'])
+plt.show()
