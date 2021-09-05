@@ -1,14 +1,17 @@
 import numpy as np 
 import pandas as pd 
-from pandas.plotting import scatter_matrix
-import datetime
+from datetime import date
+from datetime import timedelta
 import matplotlib.pyplot as plt
 import yfinance as yf
-
+from companies import *
 '''downloading stocks data and displaying it '''
-start = '2019-01-01'
-end  = '2020-12-31'
-tcs = yf.download('TCS',start,end)
-
-df = (tcs['Open'])
-plt.show()
+start = date.today() - timedelta(days = 7)
+end = date.today()
+Company = input("Enter Company name :").lower()
+if(Company=='tcs'):
+    tcs()
+elif(Company=="microsoft"):
+    MSFT()  
+elif(Company=="de"):
+    DE()
